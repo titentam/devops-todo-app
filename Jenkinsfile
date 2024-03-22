@@ -8,8 +8,10 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/titentam/devops-todo-app.git'
             }
         }
-        stage('testing'){
-            sh 'pwd'
+        stage('testing') {
+            steps {
+                sh 'ls -la' // Command changed to list directory contents for demonstration
+            }
         }
     }
 }
